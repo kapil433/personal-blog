@@ -1,0 +1,66 @@
+# Site Settings
+title: Kapil Gupta
+description: "Automotive analyst, complexity scientist, researcher. Writing about data, systems, and policy."
+url: "https://kapil433.github.io"
+baseurl: "/personal-blog"
+author:
+  name: Kapil Gupta
+  email: ""
+  bio: "Automotive Industry Analyst | Complexity Science | Data-Driven Research"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  stories:
+    output: true
+    permalink: /stories/:title/
+  essays:
+    output: true
+    permalink: /essays/:title/
+  work:
+    output: true
+    permalink: /work/:title/
+  lab:
+    output: true
+    permalink: /lab/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "stories"
+    values:
+      layout: "post"
+      human_only: true
+      ai_assisted: false
+  - scope:
+      path: ""
+      type: "essays"
+    values:
+      layout: "post"
+      ai_assisted: true
+  - scope:
+      path: ""
+      type: "work"
+    values:
+      layout: "post"
+      ai_assisted: true
+  - scope:
+      path: ""
+      type: "lab"
+    values:
+      layout: "post"
+      ai_assisted: true
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
